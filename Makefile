@@ -27,3 +27,8 @@ init:
 	ln -s ./src/test/java lombok
 	echo "/src/main/lombok" >> ./git/info/exclude
 	echo "/src/test/lombok" >> ./git/info/exclude
+
+delombok:
+	./mvnw clean
+	mkdir -p ./target/generated-sources/delombok ./target/generated-test-sources/delombok
+	./mvnw lombok:delombok lombok:testDelombok
