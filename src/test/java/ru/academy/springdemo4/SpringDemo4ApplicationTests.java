@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -42,6 +43,7 @@ class SpringDemo4ApplicationTests {
 
   @Test
   @SneakyThrows
+  @DisplayName("Тестируем котов через рест!")
   void contextLoads() {
     mockMvc.perform(MockMvcRequestBuilders.get("/cats"))
         .andExpect(MockMvcResultMatchers.status().isOk())
