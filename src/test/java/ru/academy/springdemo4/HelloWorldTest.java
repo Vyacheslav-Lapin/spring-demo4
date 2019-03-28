@@ -26,7 +26,7 @@ class HelloWorldTest {
     assertEquals(expectedPerson, context.getBean("person"));
   }
 
-  private static Person getExpectedPerson() {
+  static Person getExpectedPerson() {
     return UsualPerson.builder()
                .age(35)
                .name("John Smith")
