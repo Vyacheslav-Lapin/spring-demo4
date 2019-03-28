@@ -4,13 +4,9 @@ import static lombok.AccessLevel.PRIVATE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.academy.springdemo4.HelloWorldTest.getExpectedPerson;
 
-import java.util.ArrayList;
-import java.util.List;
-import lab.model.Country;
 import lab.model.Person;
 import lab.model.UsualPerson;
 import lombok.experimental.FieldDefaults;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.academy.springdemo4.HelloWorldTest.getExpectedPerson;
 
 import lab.model.Person;
-import lab.model.UsualPerson;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.Test;
@@ -16,10 +15,13 @@ import org.springframework.test.context.ContextConfiguration;
 @SpringBootTest
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-@ContextConfiguration("classpath:application-context.xml")
+@ContextConfiguration(
+    classes = SpringDemo4Application.class
+//    "classpath:application-context.xml"
+)
 class SpringTCFAppTest {
 
-	UsualPerson person;
+	Person person;
 
 	Person expectedPerson = getExpectedPerson();
 
