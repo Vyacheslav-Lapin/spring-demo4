@@ -5,6 +5,7 @@ import static lombok.AccessLevel.PRIVATE;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Builder.Default;
 import lombok.Data;
 import lombok.EqualsAndHashCode.Exclude;
 import lombok.NoArgsConstructor;
@@ -44,6 +45,10 @@ public class UsualPerson implements Person {
 
   @NonNull
   boolean isProgrammer;
+
+  @NonNull
+  @Default
+  boolean isBroke = false;
 
   @Singular
   @NonNull

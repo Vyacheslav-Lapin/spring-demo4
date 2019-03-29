@@ -15,6 +15,10 @@ public interface Person {
 
   boolean isProgrammer();
 
+  boolean isBroke();
+
+  Person setBroke(boolean broke);
+
   List<String> getContacts();
 
   default void sayHello(Person person) {
